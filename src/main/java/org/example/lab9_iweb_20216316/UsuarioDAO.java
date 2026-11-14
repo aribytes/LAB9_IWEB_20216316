@@ -64,8 +64,7 @@ public class UsuarioDAO {
         Usuario usuario = buscarPorEmail(email);
 
         if (usuario != null &&
-                usuario.getPasswordHash().equals(
-                        HashUtil.generarHash(password)) &&
+                usuario.getPasswordHash().equals(HashUtil.generarHash(password)) &&
                 usuario.getEstado().equals("ACTIVO")) {
 
             return usuario;
